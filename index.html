@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nerf Guns Database</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container">
+        <h1>🎯 Nerf Guns Database</h1>
+        <p>The ultimate collection of all Nerf blasters ever made</p>
+        <a href="https://github.com/knowlesjr-crypto/nerf-guns-database" class="github-link" target="_blank" rel="noopener">
+          View on GitHub
+        </a>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Search and filter Nerf guns">
+        <label>
+          🔍 Search
+          <input id="searchInput" type="text" placeholder="Search by name, series, or type..." />
+        </label>
+
+        <label>
+          📚 Series
+          <select id="seriesFilter">
+            <option value="all">All series</option>
+          </select>
+        </label>
+
+        <label>
+          🎲 Type
+          <select id="typeFilter">
+            <option value="all">All types</option>
+          </select>
+        </label>
+
+        <button id="resetBtn" class="reset-btn">Reset Filters</button>
+      </section>
+
+      <section class="summary">
+        <div id="resultCount" aria-live="polite">Loading blasters...</div>
+      </section>
+
+      <section class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Series</th>
+              <th>Type</th>
+              <th>Year</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>
+          Created with ❤️ | <a href="https://github.com/knowlesjr-crypto/nerf-guns-database">GitHub Repository</a>
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
